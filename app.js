@@ -3,6 +3,9 @@ const app = express();
 const port = process.env.PORT || 3001;
 
 app.get("/", (req, res) => res.type('html').send(html));
+app.get('/test', (req, res) => {
+  res.send('Hello World, ya mansour!');
+});
 
 const server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
@@ -54,7 +57,7 @@ const html = `
   </head>
   <body>
     <section>
-      Hello from Render!
+      Hello from Render ya mans!
     </section>
   </body>
 </html>
